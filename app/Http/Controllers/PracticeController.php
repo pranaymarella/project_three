@@ -3,9 +3,29 @@
 namespace App\Http\Controllers;
 
  use Illuminate\Http\Request;
+ use Debugbar;
+ use cebe\markdown\MarkdownExtra;
 
  class PracticeController extends Controller
  {
+
+     public function practice5()
+     {
+         $parser = new MarkdownExtra();
+         echo $parser->parse('# Hello World');
+     }
+
+     public function practice4()
+     {
+         Debugbar::info($_GET);
+         Debugbar::info(['a' => 1, 'b' => 2, 'c' => 3]);
+         Debugbar::error('Error!');
+         Debugbar::warning('Watch out...');
+         Debugbar::addMessage('Another message', 'myLabel');
+
+         return 'Practice 4';
+     }
+
      public function practice3()
      {
          return view('abc');
