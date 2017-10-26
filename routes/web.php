@@ -15,6 +15,14 @@
 //     return view('welcome');
 // });
 
+Route::get('/env', function() {
+    dump(config('app.name'));
+    dump(config('app.env'));
+    dump(config('app.debug'));
+    dump(config('app.url'));
+});
+
+Route::any('/practice/{n?}', 'PracticeController@index');
 
 Route::get('/', 'BudgetController@index');
 Route::get('/budget', 'BudgetController@budget');
