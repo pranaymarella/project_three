@@ -10,11 +10,11 @@ class BudgetController extends Controller
 
     public function index()
     {
-        return "This will view the main page of the application";
+        return view('layouts.master');
     }
 
     public function budget()
     {
-        return "This will store the users budget";
+        return view('budget.budget');
     }
 }
