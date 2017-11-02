@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <h4><strong>Current Budget:<strong></h4>
+    <h4><strong>Current Budget:</strong></h4>
     <h1>$ {{ $budget or "0.00" }}</h1>
     <br>
     <table class='budget_table'>

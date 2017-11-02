@@ -13,7 +13,7 @@
 	</header>
 
 	<section>
-        <h3>@yield('content', 'This is the main page')</h3>
+        @yield('content', 'This is the main page')
 	</section>
 
 	<footer>
