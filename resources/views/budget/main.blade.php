@@ -37,7 +37,7 @@
         </tr>
     </table>
     <br>
-    <a href='/budget'><button>Change</button></a>
+    <button><a href='/budget'>Change</a></button>
     <br>
 
     <h4>{{ $food_text or '' }}</h4>
