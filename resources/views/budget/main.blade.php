@@ -40,7 +40,9 @@
     <a href='/budget'><button>Change</button></a>
     <br>
 
-    <h4>{{ $food_text or '' }}</h4>
+    @if ( !empty($food_text))
+        <h4>{{ $food_text }}</h4>
+    @endif
     <h4>{{ $entertainment_text or '' }}</h4>
     <h4>{{ $savings_text or '' }}</h4>
     <h4>{{ $miscellanious_text or '' }}</h4>
