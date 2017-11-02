@@ -7,7 +7,7 @@
 
 @section('content')
     <h4><strong>Current Budget:</strong></h4>
-    <h1>$ {{ $budget or "0.00" }}</h1>
+    <h2>$ {{ $budget or "0.00" }}</h2>
     <br>
     <table class='budget_table'>
         <tr class='table_headers'>
@@ -43,7 +43,16 @@
     @if ( !empty($food_text))
         <h4>{{ $food_text }}</h4>
     @endif
-    <h4>{{ $entertainment_text or '' }}</h4>
-    <h4>{{ $savings_text or '' }}</h4>
-    <h4>{{ $miscellanious_text or '' }}</h4>
+
+    @if ( !empty($entertainment_text))
+        <h4>{{ $entertainment_text }}</h4>
+    @endif
+
+    @if ( !empty($savings_text))
+        <h4>{{ $savings_text }}</h4>
+    @endif
+
+    @if ( !empty($miscellanious_text))
+        <h4>{{ $miscellanious_text }}</h4>
+    @endif
 @endsection
