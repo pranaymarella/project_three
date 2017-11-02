@@ -9,7 +9,7 @@
     <form method='POST' action='/budget/change'>
         {{ csrf_field() }}
 
-        <input type="text" name="new_budget" placeholder="$ New Budget">
+        <input type="text" name="new_budget" placeholder="$ New Budget" value="{{ old('new_budget') }}">
         <table class='budget_table'>
             <tr class='table_headers'>
                 <th>Categories</th>
@@ -73,4 +73,12 @@
         <br><br>
         <input type='submit'>
     </form>
+
+    @if (count($errors) > 0)
+        <ul class="error">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
 @endsection

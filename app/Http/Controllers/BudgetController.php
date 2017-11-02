@@ -61,6 +61,9 @@ class BudgetController extends Controller
 
     public function change(Request $request)
     {
+        $this->validate($request, [
+            'new_budget' => 'required|numeric'
+        ]);
         $budget = $request->input('new_budget');
         $food = $request->input('food_alloc');
         $entertainment = $request->input('entertainment_alloc');
