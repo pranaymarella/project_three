@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+
+.budget_table {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.table_headers {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+input {
+    margin-bottom: 10px;
+}

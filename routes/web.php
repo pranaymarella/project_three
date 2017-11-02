@@ -26,3 +26,5 @@ Route::any('/practice/{n?}', 'PracticeController@index');
 
 Route::get('/', 'BudgetController@index');
 Route::get('/budget', 'BudgetController@budget');
+
+Route::post('/budget/change', 'BudgetController@change');
