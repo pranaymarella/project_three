@@ -6,6 +6,8 @@
 @endsection
 
 @section('content')
+    <h3>Change Budget</h3>
+    <br>
     <form method='POST' action='/budget/change'>
         {{ csrf_field() }}
 
